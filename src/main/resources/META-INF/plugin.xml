@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.nguyencse.png</id>
+    <name>PNG</name>
+    <vendor email="nguyencse.ninhhoa@gmail.com" url="http://www.facebook.com/nguyencse">Nguyen Y Nguyen</vendor>
+
+    <description><![CDATA[
+    PNG Image Compressor Plugin
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <idea-version since-build="191"/>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="PNG.TopMenu"
+               text="_PNG"
+               description="PNG compressor">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="png"
+                    class="actions.PngAction"
+                    text="_Compress"
+                    description="Compress"/>
+        </group>
+    </actions>
+</idea-plugin>
